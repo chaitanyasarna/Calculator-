@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator - Arithmetic Solver</title>
     <style>
-        /* This is the beginning of the CSS styles for the calculator. We will make this very long with many comments and repeated rules to ensure the code is extensive. */
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #e0f7fa; /* Light blue background for a calming effect */
@@ -15,33 +15,32 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: linear-gradient(to bottom, #e0f7fa, #b2ebf2); /* Gradient background to make it look modern */
+            background-image: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-        /* Adding more background styles to make the code longer */
         body {
             background-size: cover;
             background-position: center;
         }
-        /* Calculator container styling */
+      
         .calculator-container {
-            background-color: #ffffff; /* White background for the calculator */
-            border-radius: 20px; /* Rounded corners for a modern look */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+            background-color: #ffffff; 
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             padding: 30px;
             width: 350px;
             max-width: 90%;
             text-align: center;
         }
-        /* More shadow variations to extend the code */
+     
         .calculator-container {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px #b2ebf2; /* Adding an inner shadow */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 0 1px #b2ebf2; 
         }
-        /* Display area styling */
+      
         .display {
-            background-color: #f0f8ff; /* Very light blue for display */
-            border: 2px solid #007bff; /* Blue border */
+            background-color: #f0f8ff; 
+            border: 2px solid #007bff;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
@@ -53,70 +52,70 @@
             align-items: center;
             justify-content: flex-end;
         }
-        /* Additional display styles */
+        
         .display {
-            color: #003366; /* Dark blue text */
+            color: #003366; 
             font-weight: bold;
         }
-        /* Button grid styling */
+      
         .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
         }
-        /* Button base styling */
+      
         button {
-            background-color: #007bff; /* Blue background */
+            background-color: #007bff; 
             color: white;
             border: none;
             border-radius: 10px;
             padding: 20px;
             font-size: 1.5em;
             cursor: pointer;
-            transition: all 0.3s ease; /* Smooth transitions */
+            transition: all 0.3s ease; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Hover effect for buttons */
+        
         button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+            background-color: #0056b3; 
+            transform: translateY(-2px); 
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
-        /* Active effect for buttons */
+        
         button:active {
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        /* Special button styles for operators */
+        
         .operator {
-            background-color: #00ff0d; /* Green for operators */
+            background-color: #00ff0d; 
         }
         .operator:hover {
-            background-color: #218838; /* Darker green */
+            background-color: #218838; 
         }
-        /* Equal button styling */
+       
         .equal {
-            background-color: #ffc107; /* Yellow for equals */
+            background-color: #ffc107; 
             color: black;
         }
         .equal:hover {
-            background-color: #e0a800; /* Darker yellow */
+            background-color: #e0a800; 
         }
-        /* Clear button styling */
+
         .clear {
-            background-color: #dc3545; /* Red for clear */
+            background-color: #dc3545; 
         }
         .clear:hover {
-            background-color: #c82333; /* Darker red */
+            background-color: #c82333;
         }
-        /* Adding more button variations to make code longer */
+       
         button {
-            font-family: 'Courier New', monospace; /* Monospace font for buttons */
+            font-family: 'Courier New', monospace; 
         }
         button {
-            text-transform: uppercase; /* Uppercase text */
+            text-transform: uppercase;
         }
-        /* Responsive design for smaller screens */
+        
         @media (max-width: 400px) {
             .calculator-container {
                 width: 90%;
@@ -131,26 +130,26 @@
                 font-size: 1.2em;
             }
         }
-        /* More media queries to extend code */
+
         @media (max-width: 600px) {
             .buttons {
                 gap: 10px;
             }
         }
-        /* Title styling */
+      
         h1 {
-            color: #007bff; /* Blue title */
+            color: #007bff; 
             margin-bottom: 20px;
             font-size: 2.5em;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        /* Footer styling */
+   
         footer {
             margin-top: 20px;
             color: #666;
             font-size: 0.8em;
         }
-        /* Adding animations to make it look good */
+      
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -166,13 +165,7 @@
         .display {
             animation: slideIn 0.5s ease-out;
         }
-        /* Extensive comments to make the code even longer */
-        /* This calculator is designed to be fully functional for basic arithmetic operations. */
-        /* It includes addition, subtraction, multiplication, and division. */
-        /* The design is blue-themed with modern CSS effects. */
-        /* JavaScript handles the logic for calculations. */
-        /* We have added many CSS rules to ensure the code is very long as requested. */
-        /* Repeating some styles for redundancy */
+       
         body {
             background-color: #e0f7fa;
         }
@@ -182,7 +175,7 @@
         button {
             background-color: #007bff;
         }
-        /* End of extensive CSS */
+     
     </style>
 </head>
 <body>
@@ -214,16 +207,14 @@
     </div>
 
     <script>
-        // This is the JavaScript section for the calculator functionality. We will make this very long with comments and redundant code.
+       
         let currentInput = '';
         let operator = '';
         let previousInput = '';
-
-        // Function to append to display
         function appendToDisplay(value) {
-            // Check if it's a number or operator
+          
             if (value === '+' || value === '-' || value === '*' || value === '/') {
-                // If there's an operator already, calculate first
+              
                 if (operator !== '') {
                     calculate();
                 }
@@ -235,13 +226,9 @@
             }
             updateDisplay();
         }
-
-        // Function to update the display
         function updateDisplay() {
             document.getElementById('display').innerText = currentInput || '0';
         }
-
-        // Function to clear the display
         function clearDisplay() {
             currentInput = '';
             operator = '';
@@ -249,7 +236,7 @@
             updateDisplay();
         }
 
-        // Function to calculate the result
+     
         function calculate() {
             if (previousInput !== '' && currentInput !== '' && operator !== '') {
                 let result;
@@ -281,31 +268,15 @@
                 updateDisplay();
             }
         }
-
-        // Adding redundant functions to make the code longer
         function redundantFunction1() {
-            // This function does nothing but makes the code longer
             console.log('Redundant function 1');
         }
-
         function redundantFunction2() {
-            // Another redundant function
             console.log('Redundant function 2');
         }
-
-        // Calling redundant functions
         redundantFunction1();
         redundantFunction2();
-
-        // More comments to extend the JS
-        // This calculator supports basic arithmetic.
-        // It handles errors like division by zero.
-        // The display updates dynamically.
-        // We have added extra functions to make the code very long.
-
-        // Repeating some logic for redundancy
         function appendToDisplay(value) {
-            // Duplicate code to make it longer
             if (value === '+' || value === '-' || value === '*' || value === '/') {
                 if (operator !== '') {
                     calculate();
@@ -318,8 +289,6 @@
             }
             updateDisplay();
         }
-
-        // End of JavaScript
     </script>
 </body>
 </html>
